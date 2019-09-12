@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
-  def intro
+  def mmorten
     respond_to do |format|
-      format.html { render :intro }
+      format.html { render :mmorten }
     end
    end
 end
