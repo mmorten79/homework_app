@@ -10,4 +10,10 @@ class StaticPagesController < ApplicationController
       format.html { render :aboutMe}
      end
 end
+
+def questions
+  respond_to do |format|
+   format.html { render :questions }
+  end
+end
 end
