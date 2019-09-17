@@ -10,3 +10,12 @@
 </ul>
 
 <%= link_to 'Profile Page', aboutMe_path %>
+
+<h2>Practice questions </h2>
+<p><%=@q%></p>
+
+<ul>
+    <%= genQuestion.each do |gq| %>
+    <li><%= gq %></li>
+    <% end %>
+</ul>
