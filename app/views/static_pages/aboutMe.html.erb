@@ -11,13 +11,21 @@
 <li>I love her dearly</li>
 
 <h3>Text Input</h3>
-
-<form>
   First name:<br>
   <input type="text" name="firstname">
   <br>
   Last name:<br>
   <input type="text" name="lastname">
+<form>
+  <input list="browsers" name="browser">
+    <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
 </form>
 
 

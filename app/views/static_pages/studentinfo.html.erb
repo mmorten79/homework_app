@@ -1,0 +1,38 @@
+<h1> Student Info Form</h1>
+ 
+  <% if local_assigns.has_key? :status_msg %>
+   <p><%= status_msg %></p>
+ <% end %>
+
+<%= form_with url: form_completed_path, local: true, method: :post do %>
+<div>
+<%= label_tag "First name: " %>
+<%= text_field_tag "firstname",feedback.fetch(:firstname, nil) %>
+</div>
+<div>
+<%= label_tag "Last name: " %>
+<%= text_field_tag "lastname", feedback.fetch(:lastname, nil) %>
+</div>
+
+<div>
+<span>Are you a Resident of Tennessee ? </span>
+</div>
+<%= radio_button_tag "answer", true, feedback.fetch(:answer,nil) == true.to_s %>
+<%= label_tag "yes_answer", "Yes (In-State Student)" %>
+<br>
+<%= radio_button_tag "answer", false, feedback.fetch(:answer, nil) == false.to_s %>
+<%= label_tag "no_answer", "No (Out-State Student)" %>
+
+<div>
+<%= label_tag "Student Classification:" %>
+<%= select_tag "student_classification", options_for_select(["Freshman","Sophmore", "Junior","Senior"],feedback.fetch(:student_classification, "")), prompt: "Choose one..." %>
+
+</div>
+
+<div>
+<%= label_tag "Mailing Address"%> <br>
+<%= text_area_tag "mail_address", feedback.fetch(:mail_address, nil), size: "64x3"%>
+
+ <%= submit_tag "Submit" %>
+<%end%>
+<p><%= link_to 'Home page', mmorten_path %></p>
