@@ -13,7 +13,31 @@ class StaticPagesController < ApplicationController
      end
   end
 
-   
+
+def picChooser
+  respond_to do |format|
+    format.html { render :picChooser }
+  end
+end
+
+def picChooser_mth
+   if params[:chooser] == "Bart"
+     picture = "bart.png"
+   elsif params[:chooser] == "Lisa"
+      picture = "lisa.png"
+    elsif params[:chooser] == "Marge"
+      picture = "marge.png"
+    elsif params[:chooser] == "Homer"
+      picture = "homer.png"
+    else 
+      picture = ""
+    end      
+        
+  respond_to do |format|
+    format.html { render :picChooser, locals: { picture: picture }}
+  end
+end
+
 
     def form_completed
        required = [:firstname, :lastname, :answer, :student_classification, :mail_address ] 
@@ -39,7 +63,7 @@ class StaticPagesController < ApplicationController
           respond_to do |format|
           format.html { render :studentinfo, locals: {feedback: {}} }
           end
-        end
+        end   
       
       
   def questions
