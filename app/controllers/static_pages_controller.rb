@@ -34,7 +34,7 @@ def picChooser_mth
     end      
         
   respond_to do |format|
-    format.html { render :picChooser, locals: { picture: picture }}
+    format.html { render :picChooser, locals: { picture: picture , params: params[:chooser]}}
   end
 end
 
