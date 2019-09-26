@@ -2,7 +2,7 @@
 
   
   <% if local_assigns.has_key? :picture and not local_assigns[:picture] == "" %>
-   <p><%= image_tag picture, height:150 %></p>
+   <p><%= image_tag picture, height:300 %></p>
  <% end %>
 <%= form_with url: picChooser_mth_path, local: true, method: :post do %>
 <div>
