@@ -21,6 +21,7 @@ def picChooser
 end
 
 def picChooser_mth
+
    if params[:chooser] == "Bart"
      picture = "bart.png"
    elsif params[:chooser] == "Lisa"

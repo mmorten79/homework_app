@@ -1,13 +1,13 @@
 <h1>Picture chooser </h1>
 
   
-  <% if local_assigns.has_key? :picture %>
-   <p><%= image_tag picture%></p>
+  <% if local_assigns.has_key? :picture and not local_assigns[:picture] == "" %>
+   <p><%= image_tag picture, height:150 %></p>
  <% end %>
 <%= form_with url: picChooser_mth_path, local: true, method: :post do %>
 <div>
 <%= label_tag "Picture Chooser:" %>
-<%= select_tag "chooser", options_for_select(["Bart","Homer", "Marge","Lisa"], local_assigns.fetch(:chooser,params)), prompt: "Choose one..." %>
+<%= select_tag "chooser", options_for_select(["Bart","Homer", "Marge","Lisa"], local_assigns.fetch("", params)), prompt: "Choose one..." %>
 
  <%= submit_tag "Picture Submit" %>
  
