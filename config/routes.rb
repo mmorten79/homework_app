@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'deeplooks/index'
-  get 'deeplooks/show'
+  get 'deeplooks', to: 'deeplooks#index', as: 'deeplooks' # index
+  get 'deeplooks/:id', to: 'deeplooks#show', as: 'deeplook' # show
   get 'authorcorners', to: 'authorcorners#index', as: 'authorcorners' # index
   get 'authorcorners/:id', to: 'authorcorners#show', as: 'authorcorner' # show
   post 'studentinfo', to: 'static_pages#form_completed', as: 'form_completed'
