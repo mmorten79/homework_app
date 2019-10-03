@@ -1,32 +1,26 @@
 <table style ="width: 88vw">
 
-
-
 <tr>
-<th>First name</th>
-<th>Last name</th>
-<th>Webpage</th>
-<th>Date of Birth</th>
-<th>Deceased</th>
+<th>First name</th><th>Last name</th><th>Webpage</th><th>Date of Birth</th><th>Deceased</th>
 </tr>
 
  <% authorviews.each do |a| %>
    <div id="<%= dom_id(a) %>">
    
  <tr>
- <td><%= a.first_name %></td>
- <td><%= a.last_name %></td>
- <% if a.webpage.blank? %>
- <td>N/A</td>
- <%else  %>
- <td><a href="<%=a.webpage%>"><%= a.webpage %></a></td>
- <%end%>
- <td><%= a.dob %></td>
- <% if a.dod.blank? %>
- <td>N/A</td>
- <%else  %>
- <td><%= a.dod %></td>
- <%end%>
+    <td><%= a.first_name %></td>
+    <td><%= a.last_name %></td>
+        <% if a.webpage.blank? %>
+            <td>N/A</td>
+        <%else  %>
+            <td><a href="<%=a.webpage%>"><%= a.webpage %></a></td>
+        <%end%>
+    <td><%= a.dob.strftime( '%d, %B %Y' ) %></td>
+        <% if a.dod.blank? %>
+            <td>N/A</td>
+        <%else%>
+            <td><%= a.dod.strftime( '%d, %B %Y' ) %></td>
+        <%end%>
  
  </tr>
  <%end%>

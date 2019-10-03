@@ -1,1 +1,12 @@
-<h1>Place holder for show</h1>
+<h1><%= authorview.first_name %> <%=authorview.last_name%></h1>
+<% if authorview.webpage.blank?%>
+<p>(No Website)</p>
+<%else%>
+    <a href="<%=authorview.webpage%>"><%= authorview.webpage %> </a>
+    
+    <%end%>
+<% if authorview.dod.blank?%>
+    <p>Status: Living ( <%= authorview.dob.strftime( '%d, %B %Y' ) %> ) </p>
+    <% else %>
+    <p>Status: Decease ( <%= authorview.dob.strftime( '%d, %B %Y' )%> - <%= authorview.dod.strftime( '%d, %B %Y' ) %>) </p>
+<%end%> 
