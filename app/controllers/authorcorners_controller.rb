@@ -1,8 +1,8 @@
 class AuthorcornersController < ApplicationController
   def index
-    references = Authorcorner.all
+    disp = Authorcorner.all
     respond_to do |format|
-    format.html { render :index, locals: { references:references } }
+    format.html { render :index, locals: { disp:disp } }
         
       end
   end

@@ -1,10 +1,13 @@
- <% references.each do |a| %>
+ <h1>Books</h1>
+ <% disp.each do |a| %>
    <div id="<%= dom_id(a) %>">
-<br>
-     <h1><%= a.title %></h1>
-     <p><Strong>Published By:</Strong><%= a.publisher %></p>
-     <p><Strong>Publication Date:</Strong><%= a.publication_date.strftime( '%d, %B %Y' ) %></p>
-     <p><Strong>ISDN #:</Strong><%= a.isdn %></p>
-     <p><Strong>Type:</Strong><%= a.genre %></p>
-<br>
+
+<dl>   
+<dt style="list-style-type:disc;"><Strong><%= a.title %></Strong></dt>
+     <dd style="list-style-type:circle;"><Strong>Published By:</Strong><%= a.publisher %></dd>
+     <dd style="list-style-type:circle;"><Strong>Publication Date:</Strong><%= a.publication_date.strftime( '%d, %B %Y' ) %></dd>
+     <dd style="list-style-type:circle;"><Strong>ISDN #:</Strong><%= a.isdn %></dd>
+     <dd style="list-style-type:circle;"><Strong>Type:</Strong><%= a.genre %></dd>
+</dl>
+</div>
 <%end%>
