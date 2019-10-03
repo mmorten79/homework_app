@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_02_214935) do
+ActiveRecord::Schema.define(version: 2019_10_03_033557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 2019_10_02_214935) do
     t.date "publication_date"
     t.string "isdn"
     t.string "genre"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "deeplooks", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "webpage"
+    t.date "dob"
+    t.date "dod"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

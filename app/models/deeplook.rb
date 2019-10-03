@@ -1,0 +1,2 @@
+class Deeplook < ApplicationRecord
+end
