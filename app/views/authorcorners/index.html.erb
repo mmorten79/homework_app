@@ -1,2 +1,10 @@
-<h1>Authorcorners#index</h1>
-<p>Find me in app/views/authorcorners/index.html.erb</p>
+ <% references.each do |a| %>
+   <div id="<%= dom_id(a) %>">
+<br>
+     <h1><%= a.title %></h1>
+     <p><Strong>Published By:</Strong><%= a.publisher %></p>
+     <p><Strong>Publication Date:</Strong><%= a.publication_date.strftime( '%d, %B %Y' ) %></p>
+     <p><Strong>ISDN #:</Strong><%= a.isdn %></p>
+     <p><Strong>Type:</Strong><%= a.genre %></p>
+<br>
+<%end%>
