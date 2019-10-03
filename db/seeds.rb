@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+q1 = Authorcorner.create!(title: 'American Gods', publisher: 'William Morrow, Headline', publication_date: '19-06-2001', isdn: '0-380-97365-0', genre:'Fantasy')
+
+q2 = Authorcorner.create!(title: 'Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch', publisher: 'Gollancz (UK) / Workman (US)', publication_date: '01-05-1990', isdn: '0-575-04800-X', genre:'Comedy')
+    
+q3 = Authorcorner.create!(title: 'The Colour of Magic', publisher: 'Colin Smythe', publication_date: '24-11-1983', isdn: '0-86140-324-X', genre:'Fantasy')

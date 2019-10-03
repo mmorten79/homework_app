@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'authorcorners', to: 'authorcorners#index', as: 'authorcorners' # index
+  get 'authorcorners/:id', to: 'authorcorners#show', as: 'authorcorner' # show
   post 'studentinfo', to: 'static_pages#form_completed', as: 'form_completed'
   post 'picChooser', to: 'static_pages#picChooser_mth', as: 'picChooser_mth'
   get 'mmorten', to: 'static_pages#mmorten', as: 'mmorten'

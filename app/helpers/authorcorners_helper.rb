@@ -1,0 +1,2 @@
+module AuthorcornersHelper
+end

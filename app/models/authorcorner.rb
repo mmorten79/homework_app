@@ -1,0 +1,2 @@
+class Authorcorner < ApplicationRecord
+end
