@@ -4,7 +4,7 @@ class CreateAuthorcorners < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :publisher
       t.date :publication_date
-      t.string :isbn
+      t.string :isdn
       t.string :genre
 
       t.timestamps

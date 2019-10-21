@@ -1,15 +1,29 @@
+# == Schema Information
+#
+# Table name: authorcorners
+#
+#  id               :bigint           not null, primary key
+#  genre            :string
+#  isbn             :string
+#  publication_date :date
+#  publisher        :string
+#  title            :string
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  publisher: MyString
-  publication_date: 2019-10-02
-  isbn: MyString
+  title: System String 12
+  publisher: # nil value
+  publication_date: 2019-00
+  isbn: Helpful information
   genre: MyString
 
 two:
-  title: MyString
-  publisher: MyString
+  title: Information
+  publisher: '66'
   publication_date: 2019-10-02
-  isbn: MyString
+  isbn: # nil
   genre: MyString
