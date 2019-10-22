@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2019_10_03_033557) do
     t.string "title"
     t.string "publisher"
     t.date "publication_date"
-    t.string "isbn"
+    t.string "isdn"
     t.string "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

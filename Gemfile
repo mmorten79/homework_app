@@ -56,4 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Disconnects all connections to PostgreSQL db when running rails db:reset
 gem 'pgreset', '~> 0.1.1'
 
-#gem 'annotate', group: :development
+gem 'annotate', group: :development

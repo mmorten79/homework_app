@@ -4,7 +4,7 @@
 #
 #  id               :bigint           not null, primary key
 #  genre            :string
-#  isbn             :string
+#  isdn             :string
 #  publication_date :date
 #  publisher        :string
 #  title            :string
@@ -14,9 +14,8 @@
 
 class Authorcorner < ApplicationRecord
 
-   # validates :publisher, presence: true
-   # validates :publication_date, presence: true
-   # validates :title, :isdn, :genre, presence: true
+    validates :publisher, presence: true
+    validates :title, :isdn, :genre, presence: true
 
 
 

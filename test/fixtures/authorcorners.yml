@@ -4,7 +4,7 @@
 #
 #  id               :bigint           not null, primary key
 #  genre            :string
-#  isbn             :string
+#  isdn             :string
 #  publication_date :date
 #  publisher        :string
 #  title            :string
@@ -15,15 +15,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: System String 12
-  publisher: # nil value
-  publication_date: 2019-00
-  isbn: Helpful information
-  genre: MyString
+  title: 'System String 12'
+  publisher: '# nil value'
+  isdn: 'Helpful information'
+  genre: 'MyString'
 
 two:
-  title: Information
+  title: 'Information'
   publisher: '66'
-  publication_date: 2019-10-02
-  isbn: # nil
-  genre: MyString
+  isdn: '# nil'
+  genre: 'MyString'
