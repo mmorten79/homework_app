@@ -3,16 +3,23 @@
   
   <% if local_assigns.has_key? :picture and not local_assigns[:picture] == "" %>
    <p><%= image_tag picture, height:300 %></p>
+<% else %>
+<p> Please choose a picture </p>
  <% end %>
 <%= form_with url: picChooser_mth_path, local: true, method: :post do %>
 <div>
-<%= label_tag "Picture Chooser:" %>
+<%= label_tag "Please make a selection from the drop-down" %><br>
 <%= select_tag "chooser", options_for_select(["Bart","Homer", "Marge","Lisa"], local_assigns.fetch("", params)), prompt: "Choose one..." %>
 
  <%= submit_tag "Picture Submit" %>
  
  <% end %>
 </div>
+
+<p>Home<%= link_to 'Home page', mmorten_path %></p>
+<p> NEEDED LINK <%= link_to 'About Me', aboutMe_path%> </p>
+<p> Link to Q&A page <%= link_to 'Questions', questions_path%> </p>
+<p> Studend info <%= link_to 'Student information', studentinfo_path %></p>
 
 
 
